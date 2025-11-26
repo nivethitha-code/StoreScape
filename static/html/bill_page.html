@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETAIL STORE Receipt</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles/bill_page.css">
+    <script type="text/javascript" src="/static/javascript/bill_page.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="customer-form" class="customer-form">
+            <h2>CUSTOMER DETAILS</h2>
+            <input type="text" id="customerPhone" placeholder="Enter Phone Number">
+            <button class="btn primary-btn" onclick="fetchMembershipStatus()">Proceed</button>
+            <div id="newCustomerForm" style="display: none;">
+                <h3>New Customer Registration</h3>
+                <div class="form-row">
+                    <label for="customerId">Customer ID</label>
+                    <input type="text" id="customerId">
+                </div>
+                <div class="form-row">
+                    <label for="customerName">Customer Name</label>
+                    <input type="text" id="customerName">
+                </div>
+                <div class="form-row">
+                    <label for="customerEmail">Email (Optional)</label>
+                    <input type="email" id="customerEmail">
+                </div>
+                <div class="form-row">
+                    <label for="customerAddress">Address (Optional)</label>
+                    <input type="text" id="customerAddress">
+                </div>
+                <div class="form-row">
+                    <label for="startDate">Membership Start Date</label>
+                    <input type="date" id="startDate">
+                </div>
+                <div class="form-row">
+                    <label for="expiryDate">Membership Expiry Date</label>
+                    <input type="date" id="expiryDate">
+                </div>
+                <div class="form-row">
+                    <label for="membershipStatus">Membership Status:</label>
+                    <select id="membershipStatus">
+                        <option value="Non-Member">Non-Member</option>
+                        <option value="Active Member">Active Member</option>
+                    </select>
+                </div>
+                <button class="btn success-btn" onclick="registerNewCustomer()">Register Customer</button>
+            </div>
+        </div>
+
+        <div class="split-container" id="bill" style="display: none;">
+            <div class="product-panel">
+                <h2>PRODUCT DETAILS</h2>
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Rate</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTableBody">
+                        <!-- Product data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="bill-panel print-only">
+                <div class="store-header">
+                    <h2>RETAIL STORE</h2>
+                </div>
+                <hr>
+                <div class="bill-info">
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <p><strong>Cash Bill</strong></p>
+                            <p>Customer ID: <span id="displayCustomerId"></span></p>
+                            <p>Phone: <span id="displayCustomerPhone"></span></p>
+                            <p>Membership: <span id="displayMembershipStatus"></span></p>
+                        </div>
+                        <div>
+                            <p>Bill No: <input type="text" id="billNo"></p>
+                            <p>Date: <input type="date" id="billDate"></p>
+                            <p>Time: <input type="time" id="billTime"></p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <table id="billTable">
+                    <thead>
+                        <tr>
+                            <th width="12%">Sales ID</th>
+                            <th width="13%">Product ID</th>
+                            <th width="30%">Item Name</th>
+                            <th width="10%">Qty</th>
+                            <th width="15%">Rate</th>
+                            <th width="20%">Amt</th>
+                        </tr>
+                    </thead>
+                    <tbody id="billTableBody">
+                        <!-- Rows will be added here -->
+                    </tbody>
+                </table>
+                <div class="btn-row no-print">
+                    <button class="btn success-btn" onclick="addRow()">Add Item</button>
+                    <button class="btn danger-btn" onclick="removeRow()">Remove Item</button>
+                </div>
+                <div class="summary">
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <p>Payment Method:</p>
+                            <select id="paymentMethod">
+                                <option value="cash">Cash</option>
+                                <option value="card">Card</option>
+                                <option value="upi">UPI</option>
+                            </select>
+                        </div>
+                        <div style="text-align: right;">
+                            <p>Subtotal: ₹<span id="subtotalAmount">0.00</span></p>
+                            <p id="discountRow" class="discount-text">Member Discount (5%): ₹<span
+                                    id="discountAmount">0.00</span></p>
+                            <p class="total-row">Total Amount: ₹<span id="totalAmount">0.00</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <p><strong>Thank you for shopping with us!</strong></p>
+                    <p>Visit again soon!</p>
+                </div>
+                <button class="btn primary-btn no-print" onclick="printBill()">Print Bill</button>
+                <button class="btn danger-btn no-print" onclick="resetBill()">New Bill</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

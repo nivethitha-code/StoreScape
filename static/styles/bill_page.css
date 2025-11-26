@@ -1,0 +1,264 @@
+:root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --light-gray: #f4f4f4;
+            --dark-gray: #333;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: var(--light-gray);
+            margin: 0;
+            padding: 20px;
+            color: var(--dark-gray);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 2000px;
+            /* Ensures enough space for side-by-side panels */
+            margin: auto;
+        }
+
+        .customer-form {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .split-container {
+            display: flex;
+            gap: 20px;
+            /* Small space between panels, matching the image */
+            width: 100%;
+            margin: auto;
+            flex-direction: row !important;
+            flex-wrap: nowrap;
+            height: 110vh;
+        }
+
+        .product-panel {
+            flex: 1;
+            /* Left side takes half the width */
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: white;
+            min-width: 0;
+            width: 50% !important;
+            overflow-y: auto;
+            height: 100%;
+            /* Prevent overflow */
+        }
+
+        .bill-panel {
+            flex: 1;
+            /* Right side takes half the width */
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: white;
+            min-width: 0;
+            width: 50% !important;
+            overflow-y: auto;
+            height: 100%;
+            /* Prevent overflow */
+        }
+
+        .product-table,
+        #billTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .product-table th,
+        .product-table td,
+        #billTable th,
+        #billTable td {
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: left;
+        }
+
+        .product-table th,
+        #billTable th {
+            background-color: var(--light-gray);
+            font-weight: 600;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn {
+            margin-top: 15px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .primary-btn {
+            background-color: var(--primary-color);
+        }
+
+        .primary-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .success-btn {
+            background-color: var(--secondary-color);
+        }
+
+        .success-btn:hover {
+            background-color: #27ae60;
+        }
+
+        .danger-btn {
+            background-color: var(--accent-color);
+        }
+
+        .danger-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .btn-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .summary {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: var(--light-gray);
+            border-radius: 5px;
+        }
+
+        .total-row {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .membership-active {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .membership-inactive {
+            color: var(--accent-color);
+        }
+
+        .discount-text {
+            color: var(--secondary-color);
+        }
+
+        .form-row {
+            display: block;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-row label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: var(--dark-gray);
+        }
+
+        .form-row input,
+        .form-row select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-row input:focus,
+        .form-row select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        h2
+        {
+            color: #3498db;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            .bill-panel,
+            .bill-panel * {
+                visibility: visible;
+            }
+
+            .bill-panel {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                box-shadow: none;
+                border: none;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            input, select {
+                border: none;
+                outline: none;
+            }
+
+            .summary {
+                background-color: white;
+                border: 1px solid var(--border-color);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .split-container {
+                flex-direction: row !important;
+                flex-wrap: nowrap;
+            }
+
+            .product-panel,
+            .bill-panel {
+                width: 50% !important;
+            }
+        }
