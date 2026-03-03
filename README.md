@@ -132,6 +132,6 @@ StoreScape/
 
 ## 📄 License & Author
 
-MIT License © 2025
+MIT License © 2026
 
-**Your Name** — [LinkedIn](https://linkedin.com/in/your-profile) · [GitHub](https://github.com/your-username) · your@email.com
+**D Nivethitha** — [LinkedIn](https://www.linkedin.com/in/nivethitha-d-306a46326/) · [GitHub](https://github.com/nivethitha-code) · nivethithadharmarajan25@gmail.com 
