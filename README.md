@@ -10,8 +10,8 @@
 
 | Login | Admin Dashboard | Bill Generation |
 |-------|----------------|-----------------|
-| ![Login](<img width="1528" height="735" alt="image" src="https://github.com/user-attachments/assets/90bd5550-b5dd-4df4-babf-3d3ca13e1ed9" />
-) | ![Admin](screenshots/admin.png) | ![Bill](screenshots/bill.png) |
+| <img width="1528" height="735" alt="image" src="https://github.com/user-attachments/assets/25900a02-1e51-46e4-88a9-ebe5a2a52ea8" />
+ | ![Admin](screenshots/admin.png) | ![Bill](screenshots/bill.png) |
 
 > 📁 Add your screenshots to a `screenshots/` folder in the repo root.
 
