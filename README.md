@@ -1,4 +1,4 @@
-<img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/d89809e4-a06f-4c34-a772-3c1696db7fe1" /># 🏪 StoreScape — Retail Store Automation System
+# 🏪 StoreScape — Retail Store Automation System
 
 > A full-stack retail management web app that streamlines store operations — from inventory management to bill generation — all in one place.
 
