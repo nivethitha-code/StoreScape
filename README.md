@@ -12,8 +12,6 @@
 |-------|----------------|-----------------|
 | <img width="1528" height="735" alt="image" src="https://github.com/user-attachments/assets/25900a02-1e51-46e4-88a9-ebe5a2a52ea8" />   <img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/bb1c1f76-fbd1-4691-a4f4-eb99b89f28fe" />   <img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/f1a2280c-2c21-4b6e-91eb-de1770372123" /> | <img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/79e86f56-429a-43a6-a075-31699344dcef" />   <img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/cfa3623b-c0ca-4181-8645-51f9e814e488" />   <img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/2694f20e-d395-4b77-af4a-32f87fca716c" /> | <img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/9542b476-28b8-4f06-9576-05ec2cee9eed" />   <img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/27d6de5a-1cd1-4785-a3d6-0d704c5fe77b" />   <img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/815192f7-6d07-4fc2-8cde-e846597c00c5" />   <img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/492692ab-6f03-42d1-9673-8977e7098ae6" />   <img width="1300" height="607" alt="image" src="https://github.com/user-attachments/assets/88a5d00e-e785-479e-b1ac-6a1206929cf1" /> |
 
-> 📁 Add your screenshots to a `screenshots/` folder in the repo root.
-
 ---
 
 ## 🧱 Tech Stack
